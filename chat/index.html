@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0; ">
+	<meta name="format-detection" content="telephone=no">
+	<title>梦想偶遇</title>
+	
+	<link rel="stylesheet" media="all" href="css/style.css?v=2">
+
+	
+</head>
+<body>
+	
+	<div class="wrapper" id="wrapper">
+		<section class="header">
+			<div class="current_people">目前人数：<span id="current-number">0</span> / 20</div>
+			<div class="btn_change" id="exit-trigger">摇一摇换房</div>
+		</section>
+		<section class="banner" id="banner">
+			<div class="banner_zhubo" id='banner-zhubo'>
+				<div class="ban_img animated2 infinite flipX"><img src="data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QOzaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjUtYzAxNCA3OS4xNTE0ODEsIDIwMTMvMDMvMTMtMTI6MDk6MTUgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcFJpZ2h0cz0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3JpZ2h0cy8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBSaWdodHM6TWFya2VkPSJGYWxzZSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ1dWlkOjlEODc0MzY3NTVFNkUzMTFBRDI5RTk4NEM0ODRFOTM4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjVBRjFEODk1M0YwQTExRTRBNkUwQzYxRTM3RDY3RkVFIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjVBRjFEODk0M0YwQTExRTRBNkUwQzYxRTM3RDY3RkVFIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzIgV2luZG93cyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ1dWlkOjE1MUNBMDRFNTAzRUU0MTE4QUQ5RjUyNzEzQjY2ODEwIiBzdFJlZjpkb2N1bWVudElEPSJ1dWlkOjRE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" height="80" width="80" alt=""></div>
+				<div class="ban_title">每周日晚21点黄金档<br>主播小梦  梦想守候</div>
+				<div class="ban_txt ban_txt1">坚持</div>
+				<div class="ban_txt ban_txt2">不弃</div>
+				<div class="ban_txt ban_txt3">歌者</div>
+				<div class="ban_txt ban_txt4">梦之声</div>
+				<div class="ban_txt ban_txt5">梦想</div>
+			</div>
+		
+			<div class="x_selectsongmain" id="banner-gx">
+	        	<h1 id="geshou-txt1"></h1>
+	            <h2 id="geshou-txt2"></h2>
+	        	<ul class="x_useractive" id="gx-triggers">
+	            	<li class="btn_normal" id="gx-g">过</li>
+	                <li class="btn_normal" id="gx-x">谢谢</li>
+	            </ul>
+	        	<div id="check-trigger"><span class="btn_normal btn_with_arrow" id="check-it">查看</span></div>
+	            <div class="xueyuan_img" id="xy-img"><img src="" /></div>
+	        </div>
+		
+	        <div class="banner_tuwen" id="banner-dati">
+	        	<div class="host_img animated2 infinite flipX"><img src="images/img_zcr.jpg"></div>
+	        	<div class="host_txt" id="dati-timu"></div>
+	        	<div class="host_btns" id="dati-btns">
+	        		<!-- <span class="btn_normal btn_answer">通过</span>
+	        		<span class="btn_normal btn_answer">淘汰</span> -->
+	        	</div>
+	        </div>
+	
+	        <div class="banner_tuwen" id="banner-tuwen">
+	        	<div class="host_img animated2 infinite flipX"><img src="images/img_zcr.jpg"></div>
+	        	<div class="host_txt" id="tuwen-des"></div>
+	        	<!-- <div class="host_btns">
+	        		<span id="check-tuwen" class="btn_normal btn_with_arrow">查看</span>
+	        	</div> -->
+	        </div>
+	
+	        <div class="banner_image" id="banner-image">
+	        	<img src="images/hongbao1.png" height="220" width="640" alt="">
+	        </div>
+
+
+	        <div class="x_selectsongmain" id="banner-jingcai">
+	        	<h1 id="jc-txt1"></h1>
+	            <h2 id="jc-txt2"></h2>
+	        	<span id="check-jingcai" class="btn_normal btn_with_arrow">竞猜</span>
+	        	<div class="xueyuan_img" id="jc-img"><img src="" /></div>
+	        </div>
+
+	        <div class="banner_tuwen" id="banner-jingcai-result">
+	        	<div class="host_img animated2 infinite flipX"><img src="images/img_zcr.jpg"></div>
+	        	<div class="host_txt host_txt2" id="result-des"></div>
+	        	<div class="host_btns">
+	        		<span id="check-result" class="btn_normal btn_with_arrow">查看</span>
+	        	</div>
+	        </div>
+
+	        <div class="banner2" id="banner2">
+	            <div class="f_pk_person f_pk_person1" playerId=""><img src="" height="210" width="225" alt=""><span class="playerName"></span>
+	                <a href="#" id="winBtnLeft" class="winBtn">晋级</a>
+	            </div>
+	            <div class="f_pk_person f_pk_person2" playerId=""><img src="" height="210" width="225" alt=""><span class="playerName"></span>
+	                <a href="#" id="winBtnRight" class="winBtn winBtnRight">晋级</a>
+	            </div>
+	            <div class="f_pk_vs"></div>
+	            <!--<a href="#" class="f_pk_btn"><span>最牛评选</span></a>-->
+	        </div>
+		
+		</section>
+        
+		
+		<div class="banner_all" id="banner-all">
+	    	<div class="banner_all_inside">
+	    		<div class="all_txt"><strong id="people-num"></strong><span>人在玩<br>梦想偶遇</span></div>
+	    		<p>9月21日起  东方卫视每周日晚21点黄金档</p>
+	    	</div>
+	    </div>
+		
+		
+
+		<!--layers start-->
+		<section class="slide_layer" id="gx-layer">
+			<div class="layer_content">
+		        	<h1 class="layer_title" id="gx-title">观众选择</h1>
+		            <div class="x_votelistwrap x_votelistwrap_tall">
+		            <section class="x_votelist">
+		            	<i class="icon_misic icon_guo"></i>
+		                <div class="x_songname">  <em>0</em>人对他说 "过"</div>
+		                <section class="votedata"><span></span></section>
+		            </section>
+		            <section class="x_votelist">
+		            	<i class="icon_misic icon_xie"></i>
+		                <div class="x_songname"> <em>0</em>人对他说 "谢谢"</div>
+		                <section class="votedata"><span></span></section>
+		            </section>
+		            </div>
+		        </div>
+		
+		        <div class="bottom_row">
+				<a href="#" class="btn_collapse" id="gx-collapse">收起</a>
+			</div>
+		</section>
+		
+		
+		<section class="slide_layer" id="jingcai-layer">
+			<div class="layer_content">
+	        	<h1 class="layer_title"><span id="teamName"></span>的支持率</h1>
+	            <div id="guesses_holder">
+
+	            <!-- <div class="single_guess">
+	            		<div class="guess_pic"><img src="images/bozhengchao.jpg" height="60" width="60" alt=""></div>
+	            		<div class="guess_btns">
+	            			<div class="guess_name"><span>柏正超</span></div>
+	            			<div class="guess_btn"><span>待定</span></div>
+	            			<div class="guess_btn"><span>淘汰</span></div>
+	            		</div>
+	            		<div class="guess_bar">
+	            			<div class="guess_bar1"><span>柏正超</span></div>
+	            			<div class="guess_bar2"><span>待定20%</span></div>
+	            			<div class="guess_bar2"><span>淘汰20%</span></div>
+	            		</div>
+	            	</div> -->
+	            </div>
+	            
+	        </div>
+		
+		    <div class="bottom_row">
+				<a href="#" class="btn_collapse" id="jingcai-collapse">收起</a>
+			</div>
+		</section>
+
+
+		<section class="slide_layer" id="result-layer">
+			<div class="layer_content">
+	        	<h1 class="layer_title"><span id="result-title"></span>的晋级状态</h1>
+	            <div class="tuwen_content">
+	            	<div class="kiss_bar" id="kissBar1"><p>恭喜您猜中了<span id="correctNum"></span>次结果  小梦为您献上香吻~</p> </div>
+	            	<div class="kiss_bar" id="kissBar2"><p>您一个也没猜对，我也是醉了~</p></div>
+	            	<div id="guesses_result">
+	            		<!-- <div class="single_guess">
+	            			<div class="guess_pic"><img src="images/bozhengchao.jpg" height="60" width="60" alt=""></div>
+	            			<div class="guess_result_bar">丛浩楠晋级  您选择了晋级  猜对了</div>
+	            		</div>
+	            		<div class="single_guess">
+	            			<div class="guess_pic"><img src="images/bozhengchao.jpg" height="60" width="60" alt=""></div>
+	            			<div class="guess_result_bar">丛浩楠晋级  您选择了晋级  猜对了</div>
+	            		</div>
+	            		<div class="single_guess">
+	            			<div class="guess_pic"><img src="images/bozhengchao.jpg" height="60" width="60" alt=""></div>
+	            			<div class="guess_result_bar">丛浩楠晋级  您选择了晋级  猜对了</div>
+	            		</div> -->
+	            	</div>
+	            </div>
+	        </div>
+	
+	        <div class="bottom_row">
+				<a href="#" class="btn_collapse" id="result-collapse">收起</a>
+			</div>
+		</section>
+		
+		<div class="kiss" id="kiss"></div>
+		
+		
+		
+		<section class="chat_block" id="chatBlock">
+		
+			<!-- <div class="single_chat female deco1">
+				<div class="user_photo"><img src="images/user_img2.jpg" height="80" width="80" alt=""></div>
+				<div class="user_name">sfhipi</div>
+				<div class="user_words">
+					填平了印
+					<div class="circleG_holder circleG_msg">
+						<div class="circleG circleG1"></div>
+						<div class="circleG circleG2"></div>
+						<div class="circleG circleG3"></div>
+					</div>
+					<div class="error_sending"></div>
+				</div>
+			</div> -->
+		
+		
+			<!-- <div class="single_chat me female deco1">
+				<div class="user_photo"><img src="images/user_img3.jpg" height="80" width="80" alt=""></div>
+				<div class="user_name">sfhipi</div>
+				<div class="user_words">语气敷衍，互动起来</div>
+			</div>
+		
+			<div class="single_chat">
+				<div class="user_photo"><img src="images/user_img2.jpg" height="80" width="80" alt=""></div>
+				<div class="user_name">sfhipi</div>
+				<div class="user_words">填平了印刷排版和Web设计之间的沟壑。本文中的示例都很简单,不过你应该学到的这些基础,有助于你实现像杂志或者海报一</div>
+			</div> -->
+		
+			<!-- <div class="single_chat me">
+				<div class="user_photo"><img src="images/default_photo.jpg" height="80" width="80" alt=""></div>
+				<div class="user_name">sfhipi</div>
+				<div class="user_bq"><img src="images/biaoqing_gif/bq01.gif"></div>
+			</div> -->
+		
+			<!-- <div class="system_notify"><p><span>dsdhlh</span> 加入守望室</p></div> -->
+		
+		</section>
+		
+		
+		<section class="input_bar">
+			<a href="#" class="ico_add" id="share-trigger"></a>
+			<div class="input"><input type="text" id="input-content" maxlength="50"><span id="bq-trigger"></span></div>
+			<a class="ico_share" id="send-trigger"></a>
+		</section>
+
+		<div class="biaoqing_holder" id="bq-holder">
+			<ul class="slides">
+				<li>
+					<p><span title="bq01.gif"></span></p>
+					<p><span title="bq02.gif"></span></p>
+					<p><span title="bq03.gif"></span></p>
+					<p><span title="bq04.gif"></span></p>
+					<p><span title="bqn01.gif"></span></p>
+					<p><span title="bqn02.gif"></span></p>
+					<p><span title="bqn03.gif"></span></p>
+					<p><span title="bqn04.gif"></span></p>
+				</li>
+				<li>
+					<p><span title="bq05.gif"></span></p>
+					<p><span title="bq06.gif"></span></p>
+					<p><span title="bq07.gif"></span></p>
+					<p><span title="bq08.gif"></span></p>
+					<p><span title="bqn05.gif"></span></p>
+					<p><span title="bqn06.gif"></span></p>
+					<p><span title="bqn07.gif"></span></p>
+					<p><span title="bqn08.gif"></span></p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	
+	<div id="pop_share">
+		<div class="ps_box">
+			<div class="ps_title">邀请好友</div>
+			<p>点击右上角发送给朋友，边看《中国梦之声》边聊天~</p>
+			<span id="close-pop">确定</span>
+		</div>
+	</div>
+
+	<div id="restrict_heng"><p><span>请在竖屏下玩耍！</span></p></div>
+
+	<!--loading-->
+	<div id="circleG" class="circleG_holder">
+		<div class="circleG circleG1"></div>
+		<div class="circleG circleG2"></div>
+		<div class="circleG circleG3"></div>
+	</div>
+
+	<!--top error-->
+	<div class="error_sending error_sending2" id="error-loadingscene"></div>
+
+	<!--entering room error-->
+	<div class="note_layer" id="enteringRoom">当当当。。。芝麻开门！</div>
+	<div class="note_layer" id="entered">开始愉快地聊天吧！</div>
+	
+	<div style="display:none;">
+		<audio id="audio-kiss" src="images/kiss.mp3" preload="auto"></audio>
+	</div>
+
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="http://1251097942.cdn.myqcloud.com/1251097942/chat_v2.0/js/share.js?v=1.0"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="js/main.js?v=4.2"></script>
+
+</body>
+</html>
