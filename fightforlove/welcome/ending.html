@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0; ">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/style.css?v=1">
+    <title>盛女为爱作战</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+			<img src="images/logo.jpg" width="100%"/>
+        </div>
+    </header>
+    <div class="broadcastTime">
+        STV新闻综合频道 11.17-11.28周间22:30
+    </div>
+    <section id="hostList" class="animated2 flipX infinite">
+       <div class="hostListWrap">
+            <div class="hostWrap">
+                <div class="icon">
+                    <img src="images/icon/person1.jpg" alt="">
+                </div>
+                <div class="hostName">
+                    徐隽
+                </div>
+            </div>
+            <div class="hostWrap">
+               <div class="icon">
+                   <img src="images/icon/person2.jpg" alt="">
+               </div>
+                <div class="hostName">
+                    寅蓉
+                </div>
+            </div>
+            <div class="hostWrap">
+               <div class="icon">
+                   <img src="images/icon/person3.jpg" alt="">
+               </div>
+                <div class="hostName">
+                    璐璐
+                </div>
+            </div>
+       </div>
+
+
+       <div class="hostListWrap hostListWrap2">
+           <div class="hostWrap">
+               <div class="icon">
+                   <img src="images/icon/person4.jpg" alt="">
+               </div>
+                <div class="hostName">
+                    雯颉
+                </div>
+            </div>
+            <div class="hostWrap">
+               <div class="icon">
+                   <img src="images/icon/person5.jpg" alt="">
+               </div>
+                <div class="hostName">
+                    宝妮
+                </div>
+            </div>
+            <div class="hostWrap">
+               <div class="icon">
+                   <img src="images/icon/person6.jpg" alt="">
+               </div>
+                <div class="hostName">
+                    萍萍
+                </div>
+            </div>
+       </div>
+
+
+    </section>
+    <div class="info">
+        《盛女为爱作战》是TVBC翡翠东方制作的一档爱情实战纪录片/真人秀节目，讲述6位大龄“盛女”为期半年的改造经历。节目中的6位大龄“盛女”外貌、性格都大相径庭，但均可代表一类“盛女”人群。
+    </div>
+
+    <img class="bluemoon"  src="images/bluemoon.png"/>
+
+    <a href="#" class="fightBtn">进入互动游戏</a>
+    
+    
+
+    <div id="footer">
+        <div class="copyright">本页面内容由STV新闻综合频道提供</div>
+    </div>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script>
+        jQuery.fn.stayBottom = function()
+        {
+            $('body').css({height:'auto'});
+            var viewport_height=$(window).height();
+            var body_height=$('body').height();
+            var footer_height=this.height();
+            console.log(viewport_height,body_height,footer_height);
+            if((body_height)<viewport_height){
+                $('body').css({height:viewport_height});
+                this.addClass('stay_bottom');
+            }else{
+                $('body').css({height:'auto'});
+                this.removeClass('stay_bottom');
+            }
+        }
+        $('#footer').stayBottom();
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
