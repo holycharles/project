@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]> <html class="oldie" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>intellige</title>
+	<link rel="stylesheet" media="all" href="css/screen.css">
+	
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head> 
+
+	<body>
+		<div id="header">
+		<div class="header_inside">
+			<a href="#" id="logo"></a>
+			<ul class="nav">
+				<li><a href="#">概况</a></li>
+				<li><a href="#">设备</a></li>
+				<li class="on"><a href="#">场景</a></li>
+				<li><a href="#">关于SM</a></li>
+				<li><a href="#">联系我们</a></li>
+			</ul>
+		</div>	
+		</div><!--end of header-->
+		
+		
+		<div id="content">
+			<ul class="scene_list">
+				<li>
+					<div class="scene_img"><img src="images/scene1.jpg" height="182" width="182" alt=""></div>
+					<div class="scene_txt">回家</div>
+					<div class="scene_btn">关闭</div>
+				</li>
+				<li>
+					<div class="scene_img"><img src="images/scene2.jpg" height="182" width="182" alt=""></div>
+					<div class="scene_txt">上班</div>
+					<div class="scene_btn">关闭</div>
+				</li>
+				<li class="on">
+					<div class="scene_img"><img src="images/scene1.jpg" height="182" width="182" alt=""></div>
+					<div class="scene_txt">周末</div>
+					<div class="scene_btn on">开启</div>
+				</li>
+				<li>
+					<div class="scene_img"><img src="images/scene2.jpg" height="182" width="182" alt=""></div>
+					<div class="scene_txt">上班</div>
+					<div class="scene_btn running">运行中</div>
+				</li>
+				<li>
+					<div class="scene_img"><img src="images/scene1.jpg" height="182" width="182" alt=""></div>
+					<div class="scene_txt">回家</div>
+					<div class="scene_btn">关闭</div>
+				</li>
+				<li>
+					<div class="scene_img"><img src="images/scene2.jpg" height="182" width="182" alt=""></div>
+					<div class="scene_txt">上班</div>
+					<div class="scene_btn">关闭</div>
+				</li>
+				<li class="on">
+					<div class="scene_img"><img src="images/scene1.jpg" height="182" width="182" alt=""></div>
+					<div class="scene_txt">周末</div>
+					<div class="scene_btn on">开启</div>
+				</li>
+				<li>
+					<div class="scene_img"><img src="images/scene2.jpg" height="182" width="182" alt=""></div>
+					<div class="scene_txt">上班</div>
+					<div class="scene_btn running">运行中</div>
+				</li>
+				<li>
+					<div class="scene_add"><span class="ico_add">add</span></div>
+					<div class="scene_add_txt">添加新场景...</div>
+				</li>
+			</ul>
+
+
+
+		</div><!--end of content-->
+		
+
+		 <div class="pop_edit_scene" style="display:block;">
+			<div class="edit_scene_title">给场景添加新设备...</div>
+			<ul class="device_list device_list2">
+				<li>
+					<a href="#" class="device_type"><span class="ico_device_light"></span></a>
+					<div class="device_logo"><img src="images/logo_philips.gif" height="60" width="60" alt=""></div>
+					<div class="device_name"><strong>客厅顶灯</strong><span>飞利浦</span></div>
+					<div class="device_turnner disabled"></div>
+				</li>
+				<li>
+					<a href="#" class="device_type"><span class="ico_device_light"></span></a>
+					<div class="device_logo"><img src="images/logo_nvc.gif" height="60" width="60" alt=""></div>
+					<div class="device_name"><strong>书房台灯</strong><span>雷士照明</span></div>
+					<div class="device_turnner on"></div>
+				</li>
+				<li>
+					<a href="#" class="device_type"><span class="ico_device_window"></span></a>
+					<div class="device_logo"><img src="images/logo_nvc.gif" height="60" width="60" alt=""></div>
+					<div class="device_name"><strong>书房窗帘</strong><span>未知</span></div>
+					<div class="device_turnner"></div>
+				</li>
+				<li>
+					<a href="#" class="device_type"><span class="ico_device_xiyiji"></span></a>
+					<div class="device_logo"><img src="images/logo_haier.gif" height="60" width="60" alt=""></div>
+					<div class="device_name"><strong>洗衣机</strong><span>海尔</span></div>
+					<div class="device_turnner on"></div>
+				</li>
+				<li>
+					<a href="#" class="device_type"><span class="ico_device_light"></span></a>
+					<div class="device_logo"><img src="images/logo_philips.gif" height="60" width="60" alt=""></div>
+					<div class="device_name"><strong>客厅顶灯</strong><span>飞利浦</span></div>
+					<div class="device_turnner on"></div>
+				</li>
+				<li>
+					<a href="#" class="device_type device_add"><span class="ico_add"></span></a>
+					<div class="device_name_add">添加新设备...</div>
+				</li>
+			</ul>
+			<div class="scenebtn">完成</div>
+		</div>
+
+		<div class="layer"></div>  
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/comm.js"></script>
+
+	</body>
+</html>
